@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --color-principal: #37364d;
+    --color-letras: #eff;
+    --color-letras-code: rgb(16, 154, 41);
+    font-size: larger;
+}
+
+* {
+    font-family: "Source Code Pro";
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+    user-select: none;
+}
+
+body {
+    background-color: var(--color-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#titulo {
+    color: var(--color-letras);
+    font-size: x-large;
+    font-family: monospace;
+    box-shadow: 0 0 100px rgba(73, 74, 77, 0.862);
+}
+
+aside {
+    color: rgb(128, 144, 169);
+    background-color: rgba(14, 10, 23, 0.316);
+    border-radius: 4px;
+    margin: 2px 0 4px 0;
+    padding: 0 4px;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#cifrador {
+    background-color: #13101a;
+    display: flex;
+    box-shadow: 0 0 8px #000000ac;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    gap: 10px 0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#resultado {
+    font-size: small;
+    color: var(--color-letras-code);
+    padding: 0 8px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    align-items: center;
+}
+
+.icono {
+    filter: contrast(.5);
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+}
+
+#input-original {
+    background-color: rgb(19, 16, 26);
+    min-height: 30px;
+    min-width: 200px;
+    color: var(--color-letras);
+    border: none;
+    padding: 0 8px;
+}
+
+#ayuda {
+    font-size:8px;
+    color: rgb(156, 149, 170);
+    max-width: 190px;
+    text-align: center;
+}
+
+#copy {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    font-size: x-small;
+    color: var(--color-letras-code);
+}
