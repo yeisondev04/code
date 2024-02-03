@@ -12,3 +12,5 @@ Puedes activar el "modo fiesta" ejecutando uno de los siguientes comandos:
 1. `viernes` - Modo fiesta
 2. `sábado` - Modo fiesta
 3. `domingo` - Modo fiesta
+4. `party` - Modo fiesta
+5. `fiesta` - Modo fiesta

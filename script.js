@@ -5,6 +5,7 @@ const resultado = document.getElementById("resultado")
 const inputOriginal = document.getElementById("input-original");
 const iconoBoton = document.getElementById("icono-boton")
 const ayuda = document.getElementById("ayuda")
+const style = document.styleSheets[0]
 
 
 const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -78,7 +79,7 @@ const manejarMensaje = () => {
         }, 100)
         setTimeout(() => { clearInterval(intervalo); resultado.style = "color:var(--color-letras-code)" }, 5000)
     }
-    const arrayLetras = [...inputOriginal.value]
+    const arrayLetras = [...inputOriginal.value.toUpperCase()]
     cifrar(0, arrayLetras)
 }
 
@@ -94,7 +95,7 @@ resultado.addEventListener("click", () => {
 })
 
 const manejarCambio = () => {
-    inputOriginal.value = inputOriginal.value.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    inputOriginal.value = inputOriginal.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
 cifrador.onsubmit = submit
