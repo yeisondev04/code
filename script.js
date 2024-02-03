@@ -1,11 +1,11 @@
-const inputOriginal = document.getElementById("input-original");
-const cifrador = document.getElementById("cifrador");
-const resultado = document.getElementById("resultado")
-const iconoBoton = document.getElementById("icono-boton")
-
 const titulo = document.getElementById("titulo")
 const aside = document.getElementById("aside")
+const cifrador = document.getElementById("cifrador");
+const resultado = document.getElementById("resultado")
+const inputOriginal = document.getElementById("input-original");
+const iconoBoton = document.getElementById("icono-boton")
 const ayuda = document.getElementById("ayuda")
+
 
 const alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
@@ -14,15 +14,15 @@ iconoBoton.addEventListener("click", () => {
     indexTheme = indexTheme === 0 ? 1 : 0
     if (indexTheme) {
         document.body.style = `filter: invert(1);background: #479`; iconoBoton.src = "https://images.vexels.com/media/users/3/145137/isolated/preview/e6a965902c88e80552d448aa33cab165-icono-de-rayos-de-sol-afilados.png";
-        aside.style = "color: #624911;"
         titulo.style = "color: #624911;"
+        aside.style = "color: #624911;"
         cifrador.style = "filter:contrast(.75)"
         ayuda.style = "color: #222"
     }
     else {
         document.body.style = "filter: invert(0);"; iconoBoton.src = "https://static.vecteezy.com/system/resources/previews/017/059/174/non_2x/moon-icon-free-png.png";
-        aside.style = "rgb(128, 144, 169);"
         titulo.style = "color: var(--color-letras);";
+        aside.style = "rgb(128, 144, 169);"
         cifrador.style = "filter:contrast(1)"
         ayuda.style = "color: rgb(156, 149, 170)"
     }
