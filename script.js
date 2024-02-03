@@ -67,7 +67,7 @@ const cifrar = (index, letras) => {
 
 const manejarMensaje = () => {
     const clear = inputOriginal.value == "cls" || inputOriginal.value == "clear"
-    const party = inputOriginal.value == "viernes" || inputOriginal.value == "sabado" || inputOriginal.value == "domingo"
+    const party = inputOriginal.value == "viernes" || inputOriginal.value == "sabado" || inputOriginal.value == "domingo" 
 
     if (clear) {
         resultado.innerHTML = ""; inputOriginal.value = ""
