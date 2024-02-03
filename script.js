@@ -29,15 +29,22 @@ iconoBoton.addEventListener("click", () => {
 
 })
 
-const animarLetra = letra => {
+const numeroALeatorio = () => {
+    const num = Math.floor(Math.random() * 256)
+    return num
+}
+
+const animarLetra = (letra, party) => {
     let cambiosDeLetra = 0
     if (cambiosDeLetra === 3) return
     return new Promise((resolve) => {
         const intervalo = setInterval(() => {
             cambiosDeLetra++
             letra.innerHTML = alfabeto[Math.floor(Math.random() * alfabeto.length)]
+            letra.style = `color: rgb(${numeroALeatorio()},${numeroALeatorio()},${numeroALeatorio()});`
             if (cambiosDeLetra === 3) {
                 clearInterval(intervalo)
+                letra.style = `color: var(--color-letras-code));`
                 resolve()
             }
         }, 50);
@@ -59,7 +66,19 @@ const cifrar = (index, letras) => {
 }
 
 const manejarMensaje = () => {
-    const arrayLetras = [...inputOriginal.value.toUpperCase()]
+    const clear = inputOriginal.value == "cls" || inputOriginal.value == "clear"
+    const party = inputOriginal.value == "viernes" || inputOriginal.value == "sabado" || inputOriginal.value == "domingo"
+
+    if (clear) {
+        resultado.innerHTML = ""; inputOriginal.value = ""
+        return
+    } else if (party) {
+        let intervalo = setInterval(() => {
+            resultado.style = `color: rgb(${numeroALeatorio()},${numeroALeatorio()},${numeroALeatorio()});`
+        }, 100)
+        setTimeout(() => { clearInterval(intervalo); resultado.style = "color:var(--color-letras-code)" }, 5000)
+    }
+    const arrayLetras = [...inputOriginal.value]
     cifrar(0, arrayLetras)
 }
 
@@ -73,5 +92,9 @@ resultado.addEventListener("click", () => {
     resultado.innerHTML = ""
     manejarMensaje()
 })
+
+const manejarCambio = () => {
+    inputOriginal.value = inputOriginal.value.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 
 cifrador.onsubmit = submit
