@@ -14,3 +14,6 @@ Puedes activar el "modo fiesta" ejecutando uno de los siguientes comandos:
 3. `domingo` - Modo fiesta
 4. `party` - Modo fiesta
 5. `fiesta` - Modo fiesta
+
+## accede a la página en este enlace: 
+https://cactusmccoy04.github.io/code/
