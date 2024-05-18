@@ -1,19 +1,17 @@
 # Códigos Ejecutables En El Cuadro De Texto De La Página
 
-## Limpiar
+## Limpiar consola:
 
-1. `cls` - Limpiar
-2. `clear` - Limpiar 
+1. `cls`
+2. `clear` 
 
-## Modo Fiesta
+## Modo Fiesta:
 
-Puedes activar el "modo fiesta" ejecutando uno de los siguientes comandos:
-
-1. `viernes` - Modo fiesta
-2. `sábado` - Modo fiesta
-3. `domingo` - Modo fiesta
-4. `party` - Modo fiesta
-5. `fiesta` - Modo fiesta
+1. `viernes`
+2. `sábado`
+3. `domingo`
+4. `party`
+5. `fiesta`
 
 ## accede a la página en este enlace: 
-https://cactusmccoy04.github.io/code/
+https://yeisondev04.github.io/code/
